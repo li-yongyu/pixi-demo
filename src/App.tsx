@@ -70,7 +70,7 @@ function App() {
               app.stage.removeChild();
               button.destroy();
               Assets.load(
-                "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/blob/master/src/assets/img.jpg?raw=true"
+                "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/master/src/assets/img.jpg"
               ).then((texture) => {
                 console.log("img");
                 const sprite = new Sprite(texture);
@@ -80,7 +80,7 @@ function App() {
                 app.stage.addChild(sprite);
               });
               Assets.load(
-                "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/blob/master/src/assets/video.mp4"
+                "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/master/src/assets/video.mp4"
               ).then((texture: Texture) => {
                 console.log("video");
                 const videoSource = (texture._source as VideoSource).resource;
