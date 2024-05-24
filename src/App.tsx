@@ -12,6 +12,9 @@ function App() {
     }
     flag = true;
     console.count();
+    var canvas = document.createElement("canvas");
+    var gl: any = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    alert(gl.getParameter(gl.MAX_TEXTURE_SIZE));
 
     const app = new Application();
     const { width, height } = window.screen;
@@ -19,8 +22,8 @@ function App() {
       //   "https://github.com/li-yongyu/pixi-demo/blob/master/src/assets/img.jpg?raw=true",
       //   "https://github.com/li-yongyu/pixi-demo/raw/master/src/assets/video.mp4",
       //   "https://www.w3schools.com/html/movie.mp4",
-      "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/blob/master/src/assets/img.jpg?raw=true",
-      "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/blob/master/src/assets/video.mp4?raw=true",
+      "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/master/src/assets/img.jpg",
+      "https://proxy-github-img.yongyu0629.workers.dev/li-yongyu/pixi-demo/master/src/assets/video.mp4",
     ];
     app
       .init({
@@ -81,7 +84,7 @@ function App() {
               ).then((texture: Texture) => {
                 console.log("video");
                 const videoSource = (texture._source as VideoSource).resource;
-                videoSource.autoplay = false;
+                videoSource.autoplay = true;
                 videoSource.loop = true;
                 videoSource.muted = false;
                 videoSource.currentTime = 0;
@@ -89,8 +92,8 @@ function App() {
                 videoSource.play();
 
                 const sprite = new Sprite(texture);
-                sprite.width = videoSource.videoWidth;
-                sprite.height = videoSource.videoHeight;
+                sprite.width = 100;
+                sprite.height = 100;
                 sprite.anchor.set(0.5, 0.5);
                 app.stage.addChild(sprite);
 

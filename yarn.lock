@@ -7201,7 +7201,7 @@ pirates@^4.0.1, pirates@^4.0.4:
   resolved "https://registry.npmmirror.com/pirates/-/pirates-4.0.6.tgz#3018ae32ecfcff6c29ba2267cbf21166ac1f36b9"
   integrity sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==
 
-pixi.js@^8.1.0:
+pixi.js@^8.0.0:
   version "8.1.5"
   resolved "https://registry.npmmirror.com/pixi.js/-/pixi.js-8.1.5.tgz#f5be0b6186953f881583871d3d44b988370e680b"
   integrity sha512-6Tpx4Pe00tAOfVuqJNlEk24XHCjaQ5hVwkXbeF7CBIO28G10HQSlr9dQOuLKsWx6RMrBaSpP6ujUhQ68Ok1x+w==
